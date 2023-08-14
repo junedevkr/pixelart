@@ -1,0 +1,36 @@
+body {
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+}
+
+canvas {
+  border: 1px solid black;
+  cursor: url('brush.cur'), auto;
+}
+
+.palette {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.color-box {
+  width: 20px;
+  height: 20px;
+  margin: 2px;
+  border: 1px solid #333;
+  cursor: pointer;
+}
+
+.color-display {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  border: 1px solid #333;
+}

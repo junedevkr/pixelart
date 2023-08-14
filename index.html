@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>픽셀 아트 웹페이지</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.1/spectrum.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.1/spectrum.min.js"></script>
+</head>
+
+<body>
+    <h1>픽셀 아트 그리는 곳 by junxi</h1>
+
+    <input type="text" id="colorPicker" />
+
+    <div id="colorPalette" class="palette"></div>
+    <p>선택한 색상: <span id="selectedColor" class="color-display"></span></p>
+    
+    <p>원하는 픽셀 아트 크기를 선택하세요:</p>
+    <select id="canvasSize" onchange="resizeCanvas()">
+        <option value="8">8x8</option>
+        <option value="16">16x16</option>
+        <option value="32">32x32</option>
+        <option value="64">64x64</option>
+    </select>
+    <canvas id="pixelCanvas"></canvas>
+    <button id="downloadPng" onclick="downloadPng()">PNG로 다운로드</button>
+    <button id="clearCanvas">전체 지우기</button>
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>
