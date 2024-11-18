@@ -5,32 +5,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>픽셀 아트 웹페이지</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.1/spectrum.min.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.1/spectrum.min.js"></script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            font-family: 'Arial', sans-serif;
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .redirect-button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background: linear-gradient(45deg, #6c5ce7, #a363d9);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            text-decoration: none;
+        }
+
+        .redirect-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            background: linear-gradient(45deg, #5d4adb, #945acc);
+        }
+    </style>
 </head>
 
 <body>
-    <h1>픽셀 아트 그리는 곳 by junxi</h1>
-
-    <input type="text" id="colorPicker" />
-
-    <div id="colorPalette" class="palette"></div>
-    <p>선택한 색상: <span id="selectedColor" class="color-display"></span></p>
-    
-    <p>원하는 픽셀 아트 크기를 선택하세요:</p>
-    <select id="canvasSize" onchange="resizeCanvas()">
-        <option value="8">8x8</option>
-        <option value="16">16x16</option>
-        <option value="32">32x32</option>
-        <option value="64">64x64</option>
-    </select>
-    <canvas id="pixelCanvas"></canvas>
-    <button id="downloadPng" onclick="downloadPng()">PNG로 다운로드</button>
-    <button id="clearCanvas">전체 지우기</button>
-    <script src="scripts.js"></script>
-
+    <h1>픽셀 아트 그리기</h1>
+    <a href="https://classpixelart.web.app" class="redirect-button">
+        새로운 픽셀 아트 사이트로 이동하기
+    </a>
 </body>
 
 </html>
